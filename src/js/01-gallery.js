@@ -36,12 +36,11 @@ const clickOnImg = (e) => {
     if(e.target.nodeName !== 'IMG') {
         return;
     }
-    
-    const originalRef = e.target.dataset.source;
 
     instance.show()
+    
     const modalImgRef = document.querySelector('.modal__img')
-    modalImgRef.src = originalRef
+    modalImgRef.src = e.target.dataset.source;
     
     // console.log("🚀modalImgRef", modalImgRef)
     // console.log("🚀originalRef", originalRef)
